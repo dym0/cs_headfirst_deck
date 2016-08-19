@@ -24,8 +24,15 @@ namespace Deck
 
         public void ResetDeck(int DeckNumber)
         {
-            if(DeckNumber == 1)
+           
+         
+          
+
+            if (DeckNumber == 1)
             {
+                deck1 = new Deck(randomCards);
+                randomCards = new List<Card>();
+
                 for (int suit = 0; suit < 4; suit++)
                 {
                     for (int value = 1; value < 14; value++)
@@ -44,7 +51,7 @@ namespace Deck
             }
             else
             {
-
+                deck2 = new Deck();
                 /* Todo */
                 /* recover default deck 2 state, 52 cards - sorted */
                 deck2.Sort();
@@ -115,12 +122,14 @@ namespace Deck
 
         private void Reset1_Click(object sender, EventArgs e)
         {
-
+            ResetDeck(1);
+            RedrawDeck(1);
         }
 
         private void Reset2_Click(object sender, EventArgs e)
         {
-
+            ResetDeck(2);
+            RedrawDeck(2);
         }
 
         private void Shuffle_Click(object sender, EventArgs e)
@@ -137,12 +146,17 @@ namespace Deck
 
         private void MoveToDeck2_Click(object sender, EventArgs e)
         {
+           deck2.Add( deck1.Deal(deckList1.SelectedIndex));
+            RedrawDeck(1);
+            RedrawDeck(2);
 
         }
 
         private void MoveToDeck1_Click(object sender, EventArgs e)
         {
-
+            deck1.Add(deck2.Deal(deckList2.SelectedIndex));
+            RedrawDeck(1);
+            RedrawDeck(2);
         }
 
         private void deckList1_SelectedIndexChanged(object sender, EventArgs e)

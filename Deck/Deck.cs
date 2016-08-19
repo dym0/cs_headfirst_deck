@@ -51,9 +51,17 @@ namespace Deck
             /* shuffle deck, random */
             for (int i = 0; i < shuffleCount; i++)
             {
-                Card element = cards[random.Next(0, cards.Count)];
-                cards.Remove(element);
-                cards.Insert(random.Next(1, cards.Count), element);
+                try
+                {
+                    Card element = cards[random.Next(0, cards.Count)];
+                    cards.Remove(element);
+                    cards.Insert(random.Next(1, cards.Count), element);
+                }
+                catch
+                {
+
+                }
+              
             }
 
 
