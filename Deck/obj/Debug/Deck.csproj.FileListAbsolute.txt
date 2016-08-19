@@ -1,9 +1,9 @@
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\bin\Debug\Deck.exe.config
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\bin\Debug\Deck.exe
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\bin\Debug\Deck.pdb
-c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\obj\Debug\Deck.csprojResolveAssemblyReference.cache
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\obj\Debug\Deck.Form1.resources
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\obj\Debug\Deck.Properties.Resources.resources
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\obj\Debug\Deck.csproj.GenerateResource.Cache
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\obj\Debug\Deck.exe
 c:\users\damian\documents\visual studio 2015\Projects\Deck\Deck\obj\Debug\Deck.pdb
+C:\Users\Damian\documents\visual studio 2015\Projects\Deck\Deck\obj\Debug\Deck.csprojResolveAssemblyReference.cache

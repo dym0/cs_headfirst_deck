@@ -12,13 +12,15 @@ namespace Deck
 
         private Random random = new Random();
 
+        public int shuffleCount = 55;
+
         public Deck()
         {
             cards = new List<Card>();
 
-            for(int suit = 1; suit < 4; suit++)
+            for(int suit = 0; suit < 4; suit++)
             {
-                for(int value = 0; value < 14; value++)
+                for(int value = 1; value < 14; value++)
                 {
                     cards.Add(new Card((Suits)suit, (Values)value));
                 }
@@ -47,18 +49,28 @@ namespace Deck
         public void Shuffle()
         {
             /* shuffle deck, random */
+            for (int i = 0; i < shuffleCount; i++)
+            {
+                Card element = cards[random.Next(0, cards.Count)];
+                cards.Remove(element);
+                cards.Insert(random.Next(1, cards.Count), element);
+            }
+
+
         }
 
         public IEnumerable<string> GetCardNames()
         {
-            string[] eachCard = new string[cards.Count]; 
-            
-            for(int i = 0; i < cards.Count; i++)
+            string[] eachCard = new string[cards.Count];
+
+            for (int i = 0; i < cards.Count; i++)
             {
                 eachCard[i] = cards[i].ToString();
             }
 
-            return eachCard;
+            return (eachCard);
+
+             
         }
 
         public void Sort()
